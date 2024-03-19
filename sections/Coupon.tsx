@@ -5,12 +5,12 @@ export interface Props {
 
 const Coupon = ({ description, code }: Props) => {
   return (
-    <div class="coupon-container">
-      <div class="coupon-code">
+    <div class="coupon-container text-center">
+      <div class="coupon-description  lg:text-3xl">
         <span>{description}</span>
       </div>
-      <div class="coupon-description">
-        <p>{code}</p>
+      <div class="coupon-code text-center mt-10 mb-10">
+        <span class="text-center border border-dashed border-2 border-sky-500 p-2">{code}</span>
       </div>
     </div>
   );
