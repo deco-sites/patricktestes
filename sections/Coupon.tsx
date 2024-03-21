@@ -10,7 +10,9 @@ const Coupon = ({ description, code }: Props) => {
         <span>{description}</span>
       </div>
       <div class="coupon-code text-center mt-10 mb-10">
-        <span class="text-center border border-dashed border-2 border-sky-500 p-2">{code}</span>
+        <span class="text-center border border-dashed border-2 border-sky-500 p-2">
+          {code}
+        </span>
       </div>
     </div>
   );
