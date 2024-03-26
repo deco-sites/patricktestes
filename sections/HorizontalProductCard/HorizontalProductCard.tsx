@@ -9,7 +9,7 @@ export interface Props {
 
 const HorizontalProductCard = ({ title, description, price, image }: Props) => {
   return (
-    <div className="w-full max-w-5xl flex md:flex-col md:flex-row items-start md:items-center gap-6 my-12 p-6 rounded-xl mt-2 bg-zinc-200 ">
+    <div className="w-full max-w-5xl flex sm:flex-col md:flex-row items-start md:items-center gap-6 my-12 p-6 rounded-xl mt-2 bg-zinc-200 mx-auto">
       <div className="w-full md:w-1/3 flex justify-center md:justify-start">
         <img src={image} alt={title} className="w-48 md:w-48" />
       </div>
