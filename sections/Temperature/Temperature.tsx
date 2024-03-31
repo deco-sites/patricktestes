@@ -1,4 +1,4 @@
-import weather, { Temperature } from "apps/weather/loaders/temperature.ts";
+import weather from "apps/weather/loaders/temperature.ts";
 
 import type { SectionProps } from "deco/types.ts";
 
@@ -15,7 +15,7 @@ export const loader = async (props: Props, req: Request) => {
   return { ...props, temperature };
 };
 
-export default function Temperature(
+export default function currentTemperature(
   { text, temperature }: SectionProps<typeof loader>,
 ) {
   return (
