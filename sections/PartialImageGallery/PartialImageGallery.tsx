@@ -14,7 +14,7 @@ export default function PartialImageGallery({ images, showQuantity }: Props) {
       <div className="flex flex-wrap gap-2 md:gap-4 justify-center">
         {images.slice(0, showQuantity).map((image, index) => {
           return (
-            <div className="w-40 md:w-72 md:h-48 md:max-h-48 flex justify-center items-center overflow-hidden rounded md:rounded-xl duration-300 hover:scale-110">
+            <div className="w-40 md:w-72 flex justify-center items-center overflow-hidden rounded md:rounded-xl duration-300 hover:scale-110">
               <img
                 width={304}
                 height={200}

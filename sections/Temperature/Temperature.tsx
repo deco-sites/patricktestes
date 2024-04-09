@@ -1,15 +1,18 @@
-import weather from "apps/weather/loaders/temperature.ts";
+import weather, {
+  Props as TemperatureProps,
+} from "apps/weather/loaders/temperature.ts";
 
 import type { SectionProps } from "deco/types.ts";
 
 export interface Props {
   text: string;
+  temperature: TemperatureProps;
 }
 
 export const loader = async (props: Props, req: Request) => {
   const temperature = await weather({
-    lat: -22.8709,
-    long: -43.3676,
+    lat: props.temperature.lat,
+    long: props.temperature.long,
   }, req);
 
   return { ...props, temperature };
