@@ -1,4 +1,3 @@
-import React from "react";
 import { signal, useSignal } from "@preact/signals";
 import Icon from "deco-sites/patricktestes/components/ui/Icon.tsx";
 import { invoke } from "deco-sites/patricktestes/runtime.ts";
@@ -6,6 +5,7 @@ import { total } from "deco-sites/patricktestes/sdk/useTotalVotes.ts";
 import { useEffect } from "preact/hooks";
 
 import Swal from "npm:sweetalert2@11.0.17";
+
 
 export interface VoteButtonProps {
   productID: string;
@@ -50,7 +50,7 @@ function VoteButton({ productID }: VoteButtonProps) {
       .totalVotesProduct({ productID });
 
     quantity.value = totalVotesProduct.product;
-
+    
     Swal.fire({
       position: "top-end",
       icon: "success",
@@ -61,6 +61,10 @@ function VoteButton({ productID }: VoteButtonProps) {
   };
 
   return (
+
+    <>
+    {/* <ToastContainerComponent /> */}
+
     <button
       class="flex items-center justify-center gap-1 p-1 sm:p-2 rounded bg-neutral sm:bg-white min-w-14"
       onClick={(e) => handleClick(e)}
@@ -76,6 +80,9 @@ function VoteButton({ productID }: VoteButtonProps) {
         {quantity.value}
       </span>
     </button>
+
+    </>
+    
   );
 }
 

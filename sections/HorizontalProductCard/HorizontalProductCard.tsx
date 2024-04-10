@@ -3,6 +3,8 @@ import VoteButton from "../../islands/VoteButton.tsx";
 import { useOffer } from "../../sdk/useOffer.ts";
 import { productFlag } from "../../flags/productFlag.ts";
 
+import Image from "apps/website/components/Image.tsx";
+
 export interface Props {
   titleShelf?: string;
   productsVtex?: productFlag;
@@ -13,9 +15,13 @@ export function ErrorFallback(error: Error) {
   return (
     <div className="w-full max-w-5xl flex sm:flex-col md:flex-row items-start md:items-center gap-6 my-12 p-6 rounded-xl mt-2 bg-zinc-200 mx-auto">
       <div className="w-full md:w-1/3 flex justify-center md:justify-start">
-        <img
-          src="/image/produto-teste2.png"
-          alt="Cultura da Loja"
+        <Image
+          src="https://placehold.co/180"
+          width={270}
+          height={377}
+          preload
+          loading="eager"
+          fetchPriority="high"
           className="w-48 md:w-48"
         />
       </div>
@@ -73,11 +79,9 @@ export default function HorizontalProductCard(
       <h1 className="text-center text-3xl">{titleShelf}</h1>
       {productsVtex?.map((product) => {
         const productID = product.productID;
-        const image = product.image[0].url;
+        const imageUrl = product.image[0].url;
         const productName = product.name;
         const productDescription = product.description;
-        const productListPrice = product.offers.lowPrice;
-        const productPrice = product.offers.highPrice;
         const productUrl = product.url;
 
         const { listPrice, price } = useOffer(product.offers);
@@ -85,10 +89,13 @@ export default function HorizontalProductCard(
         return (
           <div class="flex flex-col md:flex-row gap-3 sm:gap-4 md:gap-8 flex-1">
             <div className="flex flex-col gap-1 md:gap-8 flex-1 sm:pr-20 md:pr-0">
-              <img
-                src={image}
-                alt={productName}
-                loading="lazy"
+              <Image
+                src={imageUrl}
+                width={270}
+                height={377}
+                preload
+                loading="eager"
+                fetchPriority="high"
                 className={`w-48 md:w-48 duration-300 ${
                   animateImage ? "hover:scale-110" : ""
                 }`}
