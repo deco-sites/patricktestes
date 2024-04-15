@@ -26,7 +26,8 @@ import * as $SearchControls from "./islands/SearchControls.tsx";
 import * as $ShippingSimulation from "./islands/ShippingSimulation.tsx";
 import * as $ShowMore from "./islands/ShowMore.tsx";
 import * as $SliderJS from "./islands/SliderJS.tsx";
-import * as $VoteButton from "./islands/VoteButton.tsx";
+import * as $ToastContainer from "./islands/ToastContainer.tsx";
+import * as $VoteButtonIsland from "./islands/VoteButtonIsland.tsx";
 import * as $VoteTotalsHeader from "./islands/VoteTotalsHeader.tsx";
 import * as $WishlistButton_vtex from "./islands/WishlistButton/vtex.tsx";
 import * as $WishlistButton_wake from "./islands/WishlistButton/wake.tsx";
@@ -60,7 +61,8 @@ const manifest = {
     "./islands/ShippingSimulation.tsx": $ShippingSimulation,
     "./islands/ShowMore.tsx": $ShowMore,
     "./islands/SliderJS.tsx": $SliderJS,
-    "./islands/VoteButton.tsx": $VoteButton,
+    "./islands/ToastContainer.tsx": $ToastContainer,
+    "./islands/VoteButtonIsland.tsx": $VoteButtonIsland,
     "./islands/VoteTotalsHeader.tsx": $VoteTotalsHeader,
     "./islands/WishlistButton/vtex.tsx": $WishlistButton_vtex,
     "./islands/WishlistButton/wake.tsx": $WishlistButton_wake,

@@ -1,4 +1,4 @@
-import VoteButton from "../../islands/VoteButton.tsx";
+import VoteButtonIsland from "../../islands/VoteButtonIsland.tsx";
 
 import { useOffer } from "../../sdk/useOffer.ts";
 import { productFlag } from "../../flags/productFlag.ts";
@@ -136,7 +136,7 @@ export default function HorizontalProductCard(
               </div>
             </div>
 
-            <VoteButton productID={productID} />
+            <VoteButtonIsland productID={productID} />
           </div>
         );
       })}
