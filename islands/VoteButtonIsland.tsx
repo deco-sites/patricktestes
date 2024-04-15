@@ -53,8 +53,8 @@ function VoteButtonIsland({ productID }: VoteButtonProps) {
       name: "post_score",
       params: {
         score: total,
-        level: 5,
-        character: productID,
+        // level: 5,
+        // character: productID,
       },
     });
 

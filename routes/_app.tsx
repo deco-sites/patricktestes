@@ -32,7 +32,10 @@ export default defineApp(async (_req, ctx) => {
         <link rel="manifest" href={asset("/site.webmanifest")} />
 
         {/* React Toastify CSS */}
-        <link rel="stylesheet" href="https://esm.sh/react-toastify@9.1.1/dist/ReactToastify.css" />
+        <link
+          rel="stylesheet"
+          href="https://esm.sh/react-toastify@9.1.1/dist/ReactToastify.css"
+        />
       </Head>
 
       <ToastContainerComponent />
